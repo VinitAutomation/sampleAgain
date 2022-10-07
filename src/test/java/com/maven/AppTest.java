@@ -39,8 +39,8 @@ public class AppTest
 		System.out.println("No. of Flights having one stop--> "+ flObj.getOneStopFlightCount());
 		System.out.println("Branch5Minimum fare from source to destination is--> " +flObj.getMinimumFare());
 
-
 	}
+	
 	@AfterTest
 	public void tearDown()
 	{ 
