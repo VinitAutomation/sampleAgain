@@ -37,22 +37,9 @@ public class AppTest
 	public void verifyOneStopFlightCount() throws IOException {
 		searchFlightObj.searchFlightsBetweenSourceToDestination(driver, utilityObj.getValueFromProp("url"), utilityObj.getValueFromProp("source"), utilityObj.getValueFromProp("destination"));
 		System.out.println("No. of Flights having one stop--> "+ flObj.getOneStopFlightCount());
-<<<<<<< HEAD
-
-
-||||||| 027cd7c
-<<<<<<< HEAD
-		System.out.println("Minimum fare from source to destination is--> " +flObj.getMinimumFare());
-||||||| 42db33b
-		System.out.println("Minimum fare from source to destination--> " +flObj.getMinimumFare());
-=======
-=======
-
->>>>>>> 29331edbfe99727028cdbb131a73d99a6c4435e9
-		System.out.println("Minimum faare from source to destination is ---> " +flObj.getMinimumFare());
+		System.out.println("VinitMinimum fare from source to destination is--> " +flObj.getMinimumFare());
 
 	}
-
 	@AfterTest
 	public void tearDown()
 	{ 
