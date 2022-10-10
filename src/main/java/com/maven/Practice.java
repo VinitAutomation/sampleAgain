@@ -3,8 +3,13 @@ package com.maven;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.LinkedList;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.TreeMap;
 
 import org.apache.poi.ss.usermodel.Row;
@@ -18,22 +23,22 @@ public class Practice {
 		// TODO Auto-generated method stub
 		
 		
-		FileInputStream fis = new FileInputStream("C:\\Users\\vinit.kumar\\eclipse-workspace\\testJ\\TestData\\TestData.xlsx");
-		Workbook wb = new XSSFWorkbook(fis);
-		Sheet sh = wb.getSheet("JIRA");
-		int rowCount = sh.getLastRowNum() - sh.getFirstRowNum();		
-
-		Map<String, String> map = new LinkedHashMap<String, String>();
-		
-		for (int i=0; i<=rowCount; i++) {
-			Row row = sh.getRow(i);
-			for (int j=0; j< row.getLastCellNum(); j=j+2) {
-				
-				map.put(row.getCell(j).toString(), row.getCell(j+1).toString());
-			} 
-		}
-		Map<String, String> map1 = new TreeMap<String, String>(map);
-		System.out.println(map1);		
+//		FileInputStream fis = new FileInputStream("C:\\Users\\vinit.kumar\\eclipse-workspace\\testJ\\TestData\\TestData.xlsx");
+//		Workbook wb = new XSSFWorkbook(fis);
+//		Sheet sh = wb.getSheet("JIRA");
+//		int rowCount = sh.getLastRowNum() - sh.getFirstRowNum();		
+//
+//		Map<String, String> map = new LinkedHashMap<String, String>();
+//		
+//		for (int i=0; i<=rowCount; i++) {
+//			Row row = sh.getRow(i);
+//			for (int j=0; j< row.getLastCellNum(); j=j+2) {
+//				
+//				map.put(row.getCell(j).toString(), row.getCell(j+1).toString());
+//			} 
+//		}
+//		Map<String, String> map1 = new TreeMap<String, String>(map);
+//		System.out.println(map1);		
 		
 		
 //************character count in String via HashMap**********		
@@ -290,7 +295,7 @@ public class Practice {
 //			String v = m.getValue();
 //			System.out.println(k+ " " +v);
 //		}
-		
+//		
 //		LinkedList<String> ll = new LinkedList<String>();
 //		ll.add("Ram");
 //		ll.add("Shyam");
@@ -303,27 +308,33 @@ public class Practice {
 //		for(String s : ll1) {
 //			System.out.println(s);
 //		}
-//=======================				
+//=============Array List Concept==========				
 //		ArrayList<Integer> arr = new ArrayList<Integer>();
 //		arr.add(10);
 //		arr.add(25);
 //		arr.add(30);
 //		arr.add(5);
-//		Collections.sort(arr);
-		
+//		Collections.sort(arr);	
 //		ArrayList<Integer> arr1 = new ArrayList<Integer>();
-//		arr1.add(40);
+//		arr1.add(6);
 //		arr.addAll(arr1);
 //		for (Object i : arr) {			
 //			System.out.println(i);		
 //		}
 		
-//=========================		
+//===============Reverse String==========		
 //		String str = "Hello WOrld My Name";
 //		String[] str1 = str.split(" ");
 //		for(int i = str1.length-1; i>=0; i--) {
 //			System.out.print(str1[i]);
 //			System.out.print(" ");
-		}
+//		}
+		
+	
 
+}
+	
+	void run () {
+		System.out.println("run parent");
+	}
 }
