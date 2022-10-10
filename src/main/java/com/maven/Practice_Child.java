@@ -5,7 +5,7 @@ public class Practice_Child {
 	public static void main(String arg[]) {
 		
 		if(true) {
-			throw new Practice("Some information message")
+			throw new Practice("Some information message");
 		}
 		
 		
