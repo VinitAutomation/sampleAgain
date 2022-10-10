@@ -1,16 +1,23 @@
 package com.maven;
 
-public class Practice_Child extends Practice {
+public class Practice_Child {
 	
 	public static void main(String arg[]) {
 		
-		Practice_Child obj = (Practice_Child) new Practice();
-		obj.run();
+		if(true) {
+			throw new Practice("Some information message")
+		}
+		
 		
 	}
-	
-	void run () {
-		System.out.println("run child");
-	}
+		
+//		Practice_Child obj = (Practice_Child) new Practice();
+//		obj.run();
+//		
+//	}
+//	
+//	void run () {
+//		System.out.println("run child");
+//	}
 
 }

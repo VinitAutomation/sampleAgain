@@ -17,12 +17,18 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class Practice {
+public class Practice extends RuntimeException {
+	
+	Practice(String s){
+		super(s);
+	}
 	
 	public static void main(String[] args) throws IOException, FileNotFoundException, InterruptedException {
-		// TODO Auto-generated method stub
 		
 		
+	
+		
+//==============Read Excel Sheet==================		-
 //		FileInputStream fis = new FileInputStream("C:\\Users\\vinit.kumar\\eclipse-workspace\\testJ\\TestData\\TestData.xlsx");
 //		Workbook wb = new XSSFWorkbook(fis);
 //		Sheet sh = wb.getSheet("JIRA");
@@ -334,7 +340,8 @@ public class Practice {
 
 }
 	
-	void run () {
-		System.out.println("run parent");
-	}
+	
+//	void run () {
+//		System.out.println("run parent");
+//	}
 }
