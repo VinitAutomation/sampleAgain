@@ -19,9 +19,9 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class Practice extends RuntimeException {
 	
-	Practice(String s){
-		super(s);
-	}
+//	Practice(String s){
+//		super(s);
+//	}
 	
 	public static void main(String[] args) throws IOException, FileNotFoundException, InterruptedException {
 		
@@ -248,21 +248,17 @@ public class Practice extends RuntimeException {
 //		}		
 		
 //=========Pallindrome==================		
-//		int num = 122;
-//		
+//		int num = 122;//		
 //		int s=num;
-//		int sum = 0;
-//		
+//		int sum = 0;//		
 //		while(num > 0) {
 //			int r = num%10;
 //			sum = (sum*10) + r;   // 1, 12
-//			num = num/10;
-//			
+//			num = num/10;//			
 //		}
 //		if(s==sum) {
 //			System.out.println("Pallindrome");
-//		}else {System.out.println("Not Pallindrome");
-//		
+//		}else {System.out.println("Not Pallindrome");//		
 //		}
 		
 		
@@ -297,9 +293,7 @@ public class Practice extends RuntimeException {
 //		System.out.println("B1 "+b1+ "  B2 " + b2);
 //		
 //		for(Entry<Integer, String> m : hm.entrySet()) {
-//			int k = m.getKey();
-//			String v = m.getValue();
-//			System.out.println(k+ " " +v);
+//			System.out.println(m.getKey()+ " " +m.getValue());
 //		}
 //		
 //		LinkedList<String> ll = new LinkedList<String>();
@@ -341,7 +335,7 @@ public class Practice extends RuntimeException {
 }
 	
 	
-//	void run () {
-//		System.out.println("run parent");
-//	}
+	static void run () {
+		System.out.println("run parent");
+	}
 }
