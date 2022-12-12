@@ -38,7 +38,7 @@ public class AppTest
 		searchFlightObj.searchFlightsBetweenSourceToDestination(driver, utilityObj.getValueFromProp("url"), utilityObj.getValueFromProp("source"), utilityObj.getValueFromProp("destination"));
 		System.out.println("No. of Flights having one stop--> "+ flObj.getOneStopFlightCount());
 		System.out.println("Branch5Minimum fare from source to destination is--> " +flObj.getMinimumFare());
-
+		
 	}
 	
 	@AfterTest

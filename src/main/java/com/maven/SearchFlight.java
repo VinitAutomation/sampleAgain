@@ -65,6 +65,7 @@ public class SearchFlight
 		//Launching URL
 		try {
 		driver.get(url);
+		
 		utilityObj.hardWait(3);
 		utilityObj.clickUsingJavaScript(driver, fromCity);
 		fromCity.sendKeys(src);

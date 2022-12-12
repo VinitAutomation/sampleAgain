@@ -6,27 +6,116 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Set;
 import java.util.TreeMap;
+import java.util.TreeSet;
 
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class Practice extends RuntimeException {
+public abstract class Practice {
 	
-//	Practice(String s){
-//		super(s);
-//	}
+
 	
 	public static void main(String[] args) throws IOException, FileNotFoundException, InterruptedException {
 		
-		
 	
+		
+		String s=50+30+"abc"+40+40; 
+		System.out.println(s); 
+		
+//========Find integer in String and Add them=======		
+//		String sentence = "2jh22sj444kks";
+//		String splittedWords[] = sentence.split("[^0-9]+");
+//
+//		int num=0;
+//
+//		for(int i=0; i<splittedWords.length; i++) {
+//			num = num + Integer.parseInt(splittedWords[i]);
+//			String str = String.valueOf(num);
+//			//System.out.println(str);
+//
+//		}
+//		System.out.println(num);
+		
+		
+//======== First Duplicate Character============		
+//		String str = "jhgfjdsekkss";
+//		char[] ch = str.toCharArray();
+//		System.out.println(ch);
+//		String c;
+//		int i=0;
+//		
+//		for(i=0; i<str.length()-1; i++) {
+//			for(int j=1; j<str.length()-1; j++) {
+//				
+//				if(str.charAt(i) == str.charAt(j)) {
+//					
+//					System.out.println(str.charAt(i));
+//					break;
+//				}
+//				
+//			}		
+//			
+//		}	
+
+//=========length, length() vs Size()===============		
+//		
+//		int[] array = {1, 2, 3, 4, 5, 6, 7};
+//		int arrLength = array.length;
+//		
+//		String str = "asdfghjkl";
+//		int lengthStr = str.lenlength();
+//		
+//		ArrayList<Integer> alObj = new ArrayList<>();
+//		alObj.add(1);
+//		alObj.add(5);
+//		alObj.add(3);
+//		
+//		int alSize = alObj.size();
+//		
+//		System.out.println("String- "+lengthStr +"\nArray- "+ arrLength  +"\nArrayList- " +alSize);
+		
+//==========Star Pattern================		
+//		
+//		for(int i=1; i<=5; i++) {
+//			for(int j=1; j<=i; j++) {
+//				System.out.print("*");
+//			}
+//			System.out.println();
+//		}		
+		
+//		==========Remove Duplicate And Sort ArrayList=======
+//		List<Integer> arrList = new ArrayList<Integer>();
+//		arrList.add(2);
+//		arrList.add(1);
+//		arrList.add(2);
+//		arrList.add(4);
+//		
+//		Set<Integer> num = new LinkedHashSet<>(arrList);
+//		arrList.clear();
+//		arrList.addAll(num);
+//		System.out.println("Duplicate removed - " + arrList);
+//		
+//		Set<Integer> num1 = new TreeSet<Integer>(arrList);
+//		arrList.clear();
+//		arrList.addAll(num1);
+//		System.out.println("List Sorted - "+ arrList);
+//		
+//		Iterator<Integer> itr = arrList.iterator();
+//		
+//		while(itr.hasNext()) {
+//			System.out.println(itr.next());
+//		}
 		
 //==============Read Excel Sheet==================		-
 //		FileInputStream fis = new FileInputStream("C:\\Users\\vinit.kumar\\eclipse-workspace\\testJ\\TestData\\TestData.xlsx");
@@ -69,8 +158,10 @@ public class Practice extends RuntimeException {
 //		map.put("Anmol", 31);
 //		map.put("Vinit", 33);
 //		map.put("Shobhit", 32);
-		
-//		Set<Entry<String, Integer>> enSet = map.entrySet();//		 
+//		
+//		Set<String> arr = map.keySet();
+//		
+//		Set<Entry<String, Integer>> enSet = map.entrySet();		 
 //		for(Entry<String, Integer> en : enSet) {
 //			System.out.println(en.getKey()+ "---->"+ en.getValue());
 //		}
@@ -159,12 +250,13 @@ public class Practice extends RuntimeException {
 //		ll.add(3);
 //		ll.add(4);
 //		ll.add(5);
-//		
+//		System.out.println(ll);
 //		for (int num : ll) {
 //			if(!(num%2==0)) {
 //				System.out.println("Odd Number ->" +num);
 //			}
 //		}
+		
 		
 		
 	
@@ -264,15 +356,20 @@ public class Practice extends RuntimeException {
 		
 		
 //=================Prime Number==========	
-//		int num =11; 
-//		if(num%2==0 || num%3==0) {
-//			System.out.println("Not a Prime Number--> " +num);
-//		}else if(num==0){
-//			System.out.println("Not a Prime--> " +num);
-//		}else if (num==1) {
-//			System.out.println("Prime Number--> " +num);
+//		int num =55; 
+//		int count = 0;
+//		for(int i=1; i <=num; i++ )
+//		{
+//			if(num%i==0) {
+//				count = count +1;
+//			}
+//
+//		} 
+//
+//		if(count == 2) {
+//			System.out.println("prime");
 //		}else {
-//			System.out.println("Prime--> " +num);
+//			System.out.println("not prime");
 //		}
 //======================		
 		
@@ -286,11 +383,12 @@ public class Practice extends RuntimeException {
 //		hm.put(1, "test1");
 //		hm.put(2, "test2");
 //		hm.put(3, "test3");
-//		hm.put(4, "test4");
-//		System.out.println(hm.get(1));
+//		hm.put(77, "test4");
+//		hm.put(1, "test5"); //Overrides the first value
+//		System.out.println(hm.get(77));
 //		Boolean b1 = hm.containsKey(3);
 //		Boolean b2 = hm.containsValue("test2");
-//		System.out.println("B1 "+b1+ "  B2 " + b2);
+//		System.out.println("Contains key 3--> "+b1+   "  Contains Value test2--> " + b2);
 //		
 //		for(Entry<Integer, String> m : hm.entrySet()) {
 //			System.out.println(m.getKey()+ " " +m.getValue());
@@ -317,9 +415,13 @@ public class Practice extends RuntimeException {
 //		Collections.sort(arr);	
 //		ArrayList<Integer> arr1 = new ArrayList<Integer>();
 //		arr1.add(6);
-//		arr.addAll(arr1);
-//		for (Object i : arr) {			
-//			System.out.println(i);		
+//		arr.addAll(arr1);// add both the elements
+//		arr.removeAll(arr1);//remove arr1 elements
+//		//arr.retainAll(arr1);//retain arr1 element only
+//		System.out.println(arr.get(0)); //if you want single element
+//		for (int i : arr) {			
+//			System.out.println(i);
+//			
 //		}
 		
 //===============Reverse String==========		
@@ -330,12 +432,25 @@ public class Practice extends RuntimeException {
 //			System.out.print(" ");
 //		}
 		
+//===========Sorting of Array================
+//		int arr[] = {2,4,6,1};		
+//		for(int i=0; i < arr.length; i++) {			
+//			for (int j = i; j< arr.length; j++) {				
+//				if(arr[i]>arr[j]) {
+//					int x=0;
+//					x=arr[j];
+//					arr[j] = arr[i];
+//					arr[i]=x;
+//				}				
+//			}			
+//		}
+//		for (int x : arr) {
+//			System.out.println(x);
+//		}
+		
 	
 
 }
 	
-	
-	static void run () {
-		System.out.println("run parent");
-	}
+
 }
